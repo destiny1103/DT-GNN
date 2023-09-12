@@ -1,0 +1,18 @@
+Environment configuration：
+Get Networks and Feature environment:
+geopy == 2.3.0;igraph == 0.10.4;numpy == 1.22.3;pandas == 1.4.2;scipy == 1.8.0;scikit-learn == 1.1.2;shapely == 2.0.0;
+
+instructions:
+This file contains all the code for network construction, node feature calculation and model evaluation. Also, labeled ship trajectory data, organized node labels and features, and example data for model evaluation code are provided.
+
+Constructing the network and computing the node features are divided into the following steps:
+(1)Trajectory Cleaning & Mobile features
+Based on the labeled ship data, the conforming trajectory segments are filtered out (Section article 3.2.1), and the node weight features in the mobile context features (Section article 3.3.2) and spatial neighborhood features are computed.
+
+(2)DT-Netwok & Neighborhood features
+Construct the ship trajectory network by removing the long edges larger than 1km from it and save the network structure as an npz file (article section 3.2.2).
+Calculate the Euclidean spatial features of the nodes, including k-order neighborhood features and Voronoi features (article section 3.3.3).
+
+(3)Performance indicators
+Calculate weighted performance indicators and output confusion matrix figure.
+

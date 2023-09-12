@@ -1,0 +1,19 @@
+Environment configuration：
+GNN learning environment: 
+NetworkX ==2.2;Scipy == 1.8.0;Setuptools == 58.1.0;Numpy == 1.24.3;pandas == 1.4.2;torch == 2.0.1;torch-geometric == 2.3.1;
+
+instructions:
+NewYork and Singapore are datasets of cargo ships in the corresponding ports, which are used to recognize ship behavior patterns. In this case, Graph_sparse_matrix.npz is the graph adjacency matrix file, and Trajectory_label&features.csv are the labels (Label field) and features file of the trajectory points.
+
+(1)Load Data → get_data.py
+Load the constructed graph structure with features that can be selected for model training. Either train the model using the first-n samples or train the model using a random and arbitrary proportion of data as samples.
+The real values of node types in the original data are 0, 1, and 5, which need to be modified to the form of labels starting from 0 for model training.
+
+(2)Building the GNN Model → models.py
+It contains four GNN models, Chebnet, GCN, GAT, and GraphSAGE, where Chebnet, GCN, and GraphSAGE models, optionally, can add edge weight information for model training.
+
+(3)Model Training and Optimization Approach → util.py
+During training, the loss of the model on the training and validation sets, as well as the accuracy on the test set, are returned in real-time.
+
+(4)Model Training → “train” folder 
+Add the data in the DATA directory, complete the training of each GNN model, and return the accuracy on the test set, the training time, the loss on the validation set, and the results on the test set.
