@@ -24,7 +24,7 @@ def test(model, data):
 
 
 def train(model, data):
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.005, weight_decay=1e-4)
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.01, weight_decay=1e-4)
     loss_function = torch.nn.CrossEntropyLoss().to(device)
     min_val_loss = np.Inf
     best_model = None
