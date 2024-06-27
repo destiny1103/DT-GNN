@@ -1,8 +1,8 @@
 # DT-GNN
 For ship behavioral pattern recognition.  
-![framework figure](https://github.com/destiny1103/DT-GNN/assets/127482560/4a36c3a5-3920-419b-a00f-efe79172c4be =600x600)
-<p align = "center">    
-<img  src="https://github.com/destiny1103/DT-GNN/assets/127482560/4a36c3a5-3920-419b-a00f-efe79172c4be" width="400" />
+
+<p align = "left">    
+<img  src="https://github.com/destiny1103/DT-GNN/assets/127482560/4a36c3a5-3920-419b-a00f-efe79172c4be" width="600" />
 </p>
 
 # Requirements
